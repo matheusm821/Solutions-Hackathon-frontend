@@ -6,7 +6,10 @@ const flash = require('express-flash')
 const cors = require('cors')
 const path = require('path')
 const router = require('../routes/routes')
-
+const config = require('../config/config')
+const passport = require('passport')
+require('../middlewares/checkAdmin')(passport)
+const { createTable,createAdmin } = require('../database/initializeDB')
 
 class App {
     constructor() {
@@ -14,8 +17,10 @@ class App {
         this.middlewares()
         this.session()
         this.flash()
+        this.passport()
         this.routes()
         this.engine()
+        this.config()
     }
     middlewares() {
         this.express.use(bodyParser.urlencoded({ extended: false }))
@@ -53,7 +58,9 @@ class App {
     }
 
     config() {
-
+        if (config.CONFIGURATIONS.tables == true) createTable()
+        if(config.CONFIGURATIONS.relationship == true) console.log('relationship')
+        if(config.CONFIGURATIONS.createAdmin == true) createAdmin()
     }
 
     engine() {

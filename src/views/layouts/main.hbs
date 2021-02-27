@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <meta name="author" content="IsaacDSC">
+    <meta name="author" content="Matheus Mendes">
+    <meta name="author" content="João de Paula">
     <title>Ecology</title>
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/custom.css" rel="stylesheet">
@@ -14,14 +18,17 @@
     <link href="/css/all.min.css" rel="stylesheet">
 </head>
 <style>
-    body{
-        background-color: black;
+    body {
+        background-color: rgba(0, 0, 0, 0.87);
+        /*background-image: url("/images/industry/05.jpg");*/
     }
 </style>
+
 <body>
     <div class="container">
         {{>_nav}}
         {{{body}}}
+        {{>_footer}}
     </div>
 
 
