@@ -7,7 +7,7 @@ class Contact {
         const { email, name, telephone, msg } = req.body
         enviarEmail(email, name, telephone, msg)
         req.flash('success_msg', 'Menssagem enviada com sucesso!')
-        res.redirect('/')
+        res.redirect('/contact')
     }
 }
 

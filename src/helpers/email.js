@@ -1,10 +1,10 @@
 const nodemailer = require('nodemailer')
 require('dotenv').config()
 
+ console.log(process.env.EMAIL, process.env.PASSEMAIL, '<'+process.env.EMAIL+'>')
+
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
     auth: {
         user: process.env.EMAIL,
         pass: process.env.PASSEMAIL
@@ -28,7 +28,7 @@ async function enviarEmail({email,name,telephone,msg}) {
     msg = 'Não Informado'
    }
     const mailsend = await transporter.sendMail({
-        from: 'isaacdsc10@gmail.com',
+        from: '<'+process.env.EMAIL+'>',
         to: 'isaac8.silva@hotmail.com',
         subject: 'MENSAGEM HACKTUDO!',
         html: `<html>
