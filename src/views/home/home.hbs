@@ -113,36 +113,36 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <form action="" method="post">
+                    <form action="/collections/register" method="post">
                         <h5>Descarte corretamente</h5>
                         <hr>
                         <div class="row">
                             <div class="col">
-                                <select name="" id="" class="form-control" required>
+                                <select name="typeCompany" id="typeCompany" class="form-control" required>
                                     <option value="">Selecione seu tipo</option>
-                                    <option value="">Pessoal</option>
-                                    <option value="">Ferro Velho</option>
-                                    <option value="">Corporativo</option>
-                                    <option value="">Industrial</option>
+                                    <option value="Pessoal">Pessoal</option>
+                                    <option value="Ferro Velho">Ferro Velho</option>
+                                    <option value="Corporativo">Corporativo</option>
+                                    <option value="Industrial">Industrial</option>
                                 </select>
-                                <input type="text" name="" id="" class="form-control mt-3" placeholder="Nome completo" required>
-                                <input type="text" name="" id="" class="form-control mt-3" placeholder="CEP" required>
+                                <input type="text" name="name" id="name" class="form-control mt-3" placeholder="Nome completo" required>
+                                <input type="text" name="CEP" id="CEP" class="form-control mt-3" placeholder="CEP" required>
                                 <label for="" class="mt-2">Disponibilidade</label>
-                                <input type="date" class="form-control" required>
+                                <input name="date" type="date" class="form-control" required>
                             </div>
                             <div class="col">
-                                <input type="text" name="" id="" class="form-control" placeholder="Nome da Empresa" required>
-                                <input type="text" name="" id="" class="form-control mt-3" placeholder="CPF ou CNPJ" required>
-                                <input type="text" name="" id="" class="form-control mt-3"
+                                <input type="text" name="company" id="company" class="form-control" placeholder="Nome da Empresa" required>
+                                <input type="text" name="document" id="document" class="form-control mt-3" placeholder="CPF ou CNPJ" required>
+                                <input type="text" name="address" id="address" class="form-control mt-3"
                                     placeholder="Endereço e Numero" required>
                                 <div class="row mt-2">
                                     <div class="col-6">
-                                        <label for="">Hr Inicio</label>
-                                        <input type="time" name="" id="" class="form-control" required>
+                                        <label for="hrInit">Hr Inicio</label>
+                                        <input type="time" name="hrInit" id="hrInit" class="form-control" required>
                                     </div>
                                     <div class="col-6">
-                                        <label for="">Hr Fim</label>
-                                        <input type="time" name="" id="" class="form-control" required>
+                                        <label for="hrFim">Hr Fim</label>
+                                        <input type="time" name="hrFim" id="hrFim" class="form-control" required>
                                     </div>
                                 </div>
                             </div>
