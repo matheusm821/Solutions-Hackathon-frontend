@@ -3,8 +3,9 @@ const bcrypt = require('bcrypt')
 const admin = require('./models/Admin')
 const companys = require('./models/Companys')
 const collections = require('./models/Collections')
+const configs= require('./models/Config')
 
-let TABLES = [admin, companys, collections]
+let TABLES = [admin, companys, collections, configs]
 
 const createTable = () => {
     TABLES.forEach(element => {
