@@ -112,28 +112,79 @@
     <div class="home-facts counter pt80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6 col-md-3">
-                    <div class="counter-box">
-                        <p class="counter-count">89000</p>
-                        <p class="ctxt">Empresas compras de Ferro</p>
-                    </div>
+                <div class="col-5">
+                    <form action="/collections/register" method="post">
+                        <h5>Descarte corretamente</h5>
+                        <hr>
+                        <div class="row">
+                            <div class="col">
+                                <select name="typeCompany" id="typeCompany" class="form-control" required>
+                                    <option value="">Selecione seu tipo</option>
+                                    <option value="Pessoal">Pessoal</option>
+                                    <option value="Ferro Velho">Ferro Velho</option>
+                                    <option value="Corporativo">Corporativo</option>
+                                    <option value="Industrial">Industrial</option>
+                                </select>
+                                <input type="text" name="name" id="name" class="form-control mt-3" placeholder="Nome completo" required>
+                                <input type="text" name="CEP" id="CEP" class="form-control mt-3" placeholder="CEP" required>
+                                <label for="" class="mt-2">Disponibilidade</label>
+                                <input name="date" type="date" class="form-control" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" name="company" id="company" class="form-control" placeholder="Nome da Empresa" required>
+                                <input type="text" name="document" id="document" class="form-control mt-3" placeholder="CPF ou CNPJ" required>
+                                <input type="text" name="address" id="address" class="form-control mt-3"
+                                    placeholder="Endereço e Numero" required>
+                                <div class="row mt-2">
+                                    <div class="col-6">
+                                        <label for="hrInit">Hr Inicio</label>
+                                        <input type="time" name="hrInit" id="hrInit" class="form-control" required>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="hrFim">Hr Fim</label>
+                                        <input type="time" name="hrFim" id="hrFim" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-3">
+                            <div class="col"></div>
+                            <div class="col-10">
+                                <button class="btn btn-success col-12">Agendar</button>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </form>
                 </div>
-                <div class="col-lg-3 col-sm-6 col-md-3">
-                    <div class="counter-box">
-                        <p class="counter-count">79000</p>
-                        <p class="ctxt">Empresas Ferro Velho</p>
+                <div class="col-6">
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="counter-box">
+                                <p class="counter-count">89000</p>
+                                <p class="ctxt">PONTUAÇÃO CSN INOVA</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="counter-box">
+                                <p class="counter-count">79000</p>
+                                <p class="ctxt">PONTUAÇÃO CONDOMINIO</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-3">
-                    <div class="counter-box">
-                        <p class="counter-count">69000</p>
-                        <p class="ctxt">Pessoas ganhando dinheiro discartando de forma correta</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 col-md-3">
-                    <div class="counter-box">
-                        <p class="counter-count">59000</p>
-                        <p class="ctxt">Numero total de usuários</p>
+                    <div class="row mt-5">
+                        <div class="col">
+                            <div class="counter-box">
+                                <p class="counter-count">89000</p>
+                                <p class="ctxt">PONTUAÇÃO CSN INOVA</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="counter-box">
+                                <p class="counter-count">79000</p>
+                                <p class="ctxt">PONTUAÇÃO CONDOMINIO</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

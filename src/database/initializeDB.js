@@ -2,8 +2,9 @@ const bcrypt = require('bcrypt')
 
 const admin = require('./models/Admin')
 const companys = require('./models/Companys')
+const collections = require('./models/Collections')
 
-let TABLES = [admin, companys]
+let TABLES = [admin, companys, collections]
 
 const createTable = () => {
     TABLES.forEach(element => {
@@ -15,7 +16,7 @@ const createTable = () => {
 
 const createAdmin = () => {
     const pwd = 'secret'
-    bcrypt.genSalt(10, function(err, salt) {
+    bcrypt.genSalt(10, function (err, salt) {
         bcrypt.hash(pwd, salt, (err, hash) => {
             if (err) {
                 res.send('Erro ao criptogradar esta senha: ' + err)
@@ -24,7 +25,7 @@ const createAdmin = () => {
                 admin.create({
                     name: 'administrator',
                     username: 'admin',
-                    email:'admin@gmail.co,',
+                    email: 'admin@gmail.co,',
                     telephone: '99999999',
                     password: pass,
                     superuser: true
@@ -39,6 +40,6 @@ const createAdmin = () => {
 }
 
 
-module.exports = { createTable , createAdmin}
+module.exports = { createTable, createAdmin }
 
 
