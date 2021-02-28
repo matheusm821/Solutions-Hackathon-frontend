@@ -19,6 +19,7 @@ router.get('/auctions/register', auction.auctions)
 
 //ROUTER COLLETIONS
 router.post('/collections/register', collections.register)
+router.get('/schedule', collections.schedule)
 
 //ROUTERS
 

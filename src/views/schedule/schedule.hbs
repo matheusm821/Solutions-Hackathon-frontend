@@ -1,0 +1,20 @@
+<div class="containter">
+    <div class="card">
+        <div class="card-body" style="min-height: 400px;">
+            <h5>Agendamentos</h5>
+            <hr>
+            <div class="row">
+                {{#each schedule}}
+                <div class="col">
+                    <p><i class="fas fa-user"></i>{{this.name}}</p>
+                    <p><i class="fas fa-id-card"></i>{{this.document}}</p>
+                    <p><i class="fas fa-map-marker-alt"></i>{{this.CEP}}</p>
+                    <p><i class="fas fa-street-view"></i>{{this.address}}</p>
+                    <p><i class="fas fa-calendar-alt"></i>{{trataData this.date}}</p>
+                    <p><i class="fas fa-clock"></i>{{this.hrInit}} as {{this.hrFim}}</p>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

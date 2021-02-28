@@ -1,5 +1,5 @@
 const collections = require('../database/models/Collections')
-
+const db = require('../database/conn/sql')
 
 class Collections {
     register(req, res) {
@@ -13,6 +13,12 @@ class Collections {
                 req.flash('error_msg', 'Preencha os campos corretamente e tente novamente!')
                 res.redirect('/')
             })
+    }
+    schedule(req, res) {
+        let sql = `SELECT * FROM collections;`
+        db.query(sql, (err, schedule) => {
+            res.render('schedule/schedule', { schedule })
+        })
     }
 }
 
