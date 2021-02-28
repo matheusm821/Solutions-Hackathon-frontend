@@ -17,23 +17,11 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" onclick="aviso()">
                         <a class="nav-link" href="/schedule">Agendamento</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="nav-link dropdown-toggle" href="/auctions" > Leilões </a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                 <li><a class="nav-link dropdown-toggle" href="/account/login" > Login </a></li>
-                                <hr class="dropdown-divider">
-                            </li>
-
-                        </ul>
+                    <li class="nav-item" onclick="aviso()">
+                        <a class="nav-link" href="/account/login">Login</a>
                     </li>
                     <li class="nav-item">
                          <a class="nav-link dropdown-toggle" href="/contact" role="button" data-toggle="dropdown"
@@ -44,3 +32,12 @@
         </div>
     </nav>
 </header>
+
+
+
+
+<script>
+    function aviso(){
+        alert('Estamos trabalhando na forma de usar o agendamento tambem por whatsApp com Intelingencia artificial.')
+    }
+</script>

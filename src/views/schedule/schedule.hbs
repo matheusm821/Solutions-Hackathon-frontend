@@ -1,3 +1,4 @@
+
 <div class="containter">
     <div class="card">
         <div class="card-body" style="min-height: 400px;">
@@ -13,8 +14,44 @@
                     <p><i class="fas fa-calendar-alt"></i> {{trataData this.date}}</p>
                     <p><i class="fas fa-clock"></i> {{this.hrInit}} as {{this.hrFim}}</p>
                     <hr>
+                    <div class="row">
+                        <div class="col-12 mt-1">
+                            <button type="button" class="btn btn-info col-12" data-bs-toggle="modal"
+                                data-bs-target="#awaitFuncionalilty"><i class="fas fa-location-arrow"></i> Ir</button>
+                        </div>
+                        <div class="col-12 mt-1">
+                            <button type="button" class="btn btn-info col-12" data-bs-toggle="modal"
+                                data-bs-target="#awaitFuncionalilty"><i class="fas fa-bell"></i> Alertar
+                                chegada</button>
+                        </div>
+                        <div class="col-12 mt-1">
+                            <button type="button" class="btn btn-info col-12" data-bs-toggle="modal"
+                                data-bs-target="#awaitFuncionalilty"><i class="fas fa-clipboard-check"></i>
+                                Recolhido</button>
+                        </div>
+                    </div>
                 </div>
                 {{/each}}
+                <div class="col">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Estamos Tabalhando na geolocalilzação e calculos que ajudem o processo logistico.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Em breve você irá navegar pelo aplicativo guiando você nos locais estratégicos para recolhimento.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        Em breve você você poderá apetar o botão "Alertar chega" e "Recolhimento" e consiguirá enviar uma mensagem automática.
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

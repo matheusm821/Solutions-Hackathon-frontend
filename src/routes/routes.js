@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
+const { auth } = require('../middlewares/auth')
+
 const home = require('../controllers/home')
 const account = require('../controllers/account')
 const auction = require('../controllers/auction')
@@ -20,7 +22,7 @@ router.get('/auctions/register', auction.auctions)
 
 //ROUTER COLLETIONS
 router.post('/collections/register', collections.register)
-router.get('/schedule', collections.schedule)
+router.get('/schedule', auth, collections.schedule)
 
 //ROUTERS CONTACT
 router.get('/contact', contact.index)
