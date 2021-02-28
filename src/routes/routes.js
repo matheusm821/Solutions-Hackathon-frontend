@@ -5,6 +5,7 @@ const home = require('../controllers/home')
 const account = require('../controllers/account')
 const auction = require('../controllers/auction')
 const collections = require('../controllers/collections')
+const contact = require('../controllers/contact')
 
 router.get('/', home.index)
 
@@ -21,6 +22,9 @@ router.get('/auctions/register', auction.auctions)
 router.post('/collections/register', collections.register)
 router.get('/schedule', collections.schedule)
 
-//ROUTERS
+//ROUTERS CONTACT
+router.get('/contact', contact.index)
+router.post('/contact/register', contact.register)
+
 
 module.exports = router
