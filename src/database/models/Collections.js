@@ -23,10 +23,6 @@ const Collections = db.define('collections', {
         type: db.Sequelize.STRING,
         allowNull: false
     },
-    document: {
-        type: db.Sequelize.STRING,
-        allowNull: false
-    },
     address: {
         type: db.Sequelize.STRING,
         allowNull: false
@@ -36,11 +32,11 @@ const Collections = db.define('collections', {
         allowNull: false
     },
     hrInit: {
-        type: db.Sequelize.DATE,
+        type: db.Sequelize.STRING,
         allowNull: false
     },
     hrFim: {
-        type: db.Sequelize.DATE,
+        type: db.Sequelize.STRING,
         allowNull: false
     },
 
